@@ -15,7 +15,7 @@ after_success:
   - docker build -t pavelsab/multi-worker ./worker
 
   # Log in to the docker CLI
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_PASSWORD" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push pavelsab/multi-client
   - docker push pavelsab/multi-nginx
   - docker push pavelsab/multi-server
